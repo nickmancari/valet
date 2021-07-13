@@ -1,6 +1,5 @@
-<center>
+
 ![](https://github.com/nickmancari/valet/blob/main/img/icons8-valet-parking-100.png)
-</center>
 
 <h1 align='center'>VALET</h1>
 <h2 align='center'>Linux Command Runner</h2>
@@ -11,7 +10,7 @@
 
 <br>
 
-#Using Valet
+# Using Valet
 
 Simple Example:
 ```
