@@ -17,9 +17,6 @@ func RunCommand(f string) (interface{}, error) {
 		return "", nil
 	} else {
 		c := database.MapFromDatabase(f)
-//		if err != nil {
-//			fmt.Println(err)
-//		}
 
 		r := runner.ExecuteCommand(c)
 		return r, nil
