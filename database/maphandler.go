@@ -16,7 +16,7 @@ type Data struct {
 }
 
 func MapFromDatabase(f string) map[string]string {
-	content, err := ioutil.ReadFile("cmd_db")
+	content, err := ioutil.ReadFile("/var/lib/valet/cmd_db")
 	if err != nil {
 		fmt.Println(err)
 	}
