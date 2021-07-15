@@ -8,9 +8,12 @@ import (
 
 
 var commandFlag = flag.String("cmd", "", "Run Command with Assinged Alias")
+var listFlag = flag.Bool("all", false, "Lists All Current Aliases in the Database")
 
 func main() {
 
 	flag.Parse()
 	cmd.RunCommand(*commandFlag)
+	cmd.ListDatabase(*listFlag)
+
 }

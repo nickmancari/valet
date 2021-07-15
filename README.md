@@ -1,8 +1,7 @@
 
-![](https://github.com/nickmancari/valet/blob/main/img/icons8-valet-parking-100.png)
+![](https://github.com/nickmancari/valet/blob/main/img/Valet.png)
 
-<h1 align='center'>VALET</h1>
-<h2 align='center'>Linux Command Runner</h2>
+<h1 align='center'>Linux Command Runner</h1>
 <br>
 
 ![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=Linux&logoColor=white&color=2bbc8a)
