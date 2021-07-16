@@ -9,14 +9,6 @@ import (
 	"github.com/nickmancari/valet/pkg/color"
 )
 
-type Commands struct {
-	Info Data
-}
-
-type Data struct {
-	Stuff string
-}
-
 func MapFromDatabase(f string) map[string]string {
 	content, err := ioutil.ReadFile("/var/lib/valet/cmd_db")
 	if err != nil {

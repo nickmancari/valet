@@ -46,3 +46,14 @@ func ListDatabase(f bool) (interface{}, error) {
 
 	return "", nil
 }
+
+func CreateDatabase(f bool) (interface{}, error) {
+	if f == false {
+		return "", nil
+	} else {
+		r := database.Generate()
+		return r, nil
+	}
+
+	return "", nil
+}

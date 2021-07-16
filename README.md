@@ -11,7 +11,19 @@
 
 # Using Valet
 
-Simple Example:
+Simple Example, Run Command:
 ```
 $ val --cmd command
+```
+Create Database file:
+```
+$ val --generate
+```
+Edit Database file:
+```
+$ val --cmd edit
+```
+View entire Database of Aliases:
+```
+$ val --all
 ```
