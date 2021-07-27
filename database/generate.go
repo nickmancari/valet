@@ -1,16 +1,10 @@
-package database
+pckage database
 
 import (
 	"fmt"
 	"os"
 )
 
-//const fresh = []byte(`
-//{
-//	"edit": {
-//		"vim":"/var/lib/valet/cmd_db"
-//	}
-//}`)
 
 func Generate() interface{} {
 	fmt.Println("\nWould you like to generate a database file? [Y/n]"+"\n")
