@@ -16,12 +16,6 @@ func Create(f string) {
 func RunCommand(f string) (interface{}, error) {
 	if f == "" {
 		return "", nil
-	} else if f == "ls" {
-		r, err := database.AllCommands()
-		if err != nil {
-			fmt.Println(err)
-		}
-		return r, nil
 	} else {
 		c := database.MapFromDatabase(f)
 
