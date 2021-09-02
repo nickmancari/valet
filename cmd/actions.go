@@ -17,7 +17,10 @@ func RunCommand(f string) (interface{}, error) {
 	if f == "" {
 		return "", nil
 	} else {
-		c := database.MapFromDatabase(f)
+		c, err := database.MapFromDatabase(f)
+		if err != nil {
+			fmt.Println(err)
+		}
 
 		r := runner.ExecuteCommand(c)
 		return r, nil
