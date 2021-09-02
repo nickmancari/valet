@@ -2,6 +2,7 @@ package database
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"strings"
@@ -9,7 +10,7 @@ import (
 	"github.com/nickmancari/valet/pkg/color"
 )
 
-func MapFromDatabase(f string) map[string]string {
+func MapFromDatabase(f string) (map[string]string, error) {
 	content, err := ioutil.ReadFile("/var/lib/valet/cmd_db")
 	if err != nil {
 		fmt.Println(err)
@@ -23,12 +24,15 @@ func MapFromDatabase(f string) map[string]string {
 
 	for k, v := range x {
 		if strings.Contains(k, f) {
-			return v
+			return v, nil
+		} else {
+			e := make(map[string]string)
+			return e, errors.New("Alias Not Found")
 		}
 	}
 
 	y := make(map[string]string)
-	return y
+	return y, nil
 
 }
 
@@ -38,7 +42,7 @@ func AllCommands() (interface{}, error) {
 		fmt.Println(err)
 	}
 	x := make(map[string]map[string]string)
-	
+
 	er := json.Unmarshal(content, &x)
 	if er != nil {
 		fmt.Println(err)
