@@ -27,3 +27,6 @@ View entire Database of Aliases:
 ```
 $ val --all
 ```
+
+##  To Do:
+- [ ]  Add tab completion
