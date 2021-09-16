@@ -30,3 +30,4 @@ $ val --all
 
 ##  To Do:
 - [ ]  Add tab completion
+- [ ]  Add unit tests
