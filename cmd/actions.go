@@ -13,6 +13,8 @@ func Create(f string) {
 
 }
 
+//Takes argument passed and hands it off to the database parser when the proper map is returned,
+//the map is then handed to the runner to excute the alias.
 func RunCommand(f string) (interface{}, error) {
 	if f == "" {
 		return "", nil
@@ -30,6 +32,7 @@ func RunCommand(f string) (interface{}, error) {
 
 }
 
+//Takes argument passed from flag and returns a println of the JSON database.
 func ListDatabase(f bool) (interface{}, error) {
 	if f == false {
 		return "", nil
@@ -44,6 +47,7 @@ func ListDatabase(f bool) (interface{}, error) {
 	return "", nil
 }
 
+//Takes argument passed from flag and generates a starting JSON file. 
 func CreateDatabase(f bool) (interface{}, error) {
 	if f == false {
 		return "", nil

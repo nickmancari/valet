@@ -10,6 +10,8 @@ import (
 	"github.com/nickmancari/valet/pkg/color"
 )
 
+//Parses the JSON file and compares the given alias to all the keys. It loops over a map containing a string as
+//a key with another map as a value. If it gets a match it pulls the value and returns it as a map type.
 func MapFromDatabase(f string) (map[string]string, error) {
 	content, err := ioutil.ReadFile("/var/lib/valet/cmd_db")
 	if err != nil {
@@ -36,6 +38,7 @@ func MapFromDatabase(f string) (map[string]string, error) {
 
 }
 
+//Returns a structured println of the JSON file database.
 func AllCommands() (interface{}, error) {
 	content, err := ioutil.ReadFile("/var/lib/valet/cmd_db")
 	if err != nil {

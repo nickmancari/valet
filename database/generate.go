@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-
+//Creates a JSON file from which to start the database.
 func Generate() interface{} {
 	fmt.Println("\nWould you like to generate a database file? [Y/n]"+"\n")
 	var generate string
