@@ -12,24 +12,24 @@ func Generate() interface{} {
 	fmt.Scan(&generate)
 
 	if generate == "Y" {
-		err := os.Mkdir("/var/lib/valet", 0775)
+		err := os.Mkdir("/usr/local/bin/valet", 0775)
 		if err != nil {
 			fmt.Println(err)
 		}
-		f, err := os.Create("/var/lib/valet/cmd_db")
+		f, err := os.Create("/usr/local/bin/valet/cmd_db")
 		if err != nil {
 			fmt.Println(err)
 		}
 		fresh := []byte(`
 {
 	"edit": {
-		"vim": "/var/lib/valet/cmd_db"
+		"vim": "/usr/local/bin/valet/cmd_db"
 	}
 }`)
 
 		f.Write(fresh)
 		
-		r, err := fmt.Println("Database file created at /var/lib/valet")
+		r, err := fmt.Println("Database file created at /usr/local/bin/valet")
 		if err != nil {
 			fmt.Println(err)
 		}
