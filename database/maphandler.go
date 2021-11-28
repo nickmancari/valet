@@ -40,7 +40,7 @@ func MapFromDatabase(f string) (map[string]string, error) {
 
 //Returns a structured println of the JSON file database.
 func AllCommands() (interface{}, error) {
-	content, err := ioutil.ReadFile("/var/lib/valet/cmd_db")
+	content, err := ioutil.ReadFile("/usr/local/bin/valet/cmd_db")
 	if err != nil {
 		fmt.Println(err)
 	}
