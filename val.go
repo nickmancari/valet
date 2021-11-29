@@ -7,9 +7,9 @@ import (
 )
 
 
-var commandFlag = flag.String("cmd", "", "Run Command with Assinged Alias")
+var commandFlag = flag.String("cmd", "", "Run Command with Assigned Alias")
 var listFlag = flag.Bool("all", false, "Lists All Current Aliases in the Database")
-var createFlag = flag.Bool("generate", false, "Create Database File")
+var createFlag = flag.Bool("init", false, "Create Database File")
 
 //Handle flag flow to respected functions.
 //Takes argument passed in from the commandline and hands it off to the designated function.
